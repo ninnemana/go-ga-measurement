@@ -1,5 +1,9 @@
 package measurement
 
+import (
+	"strconv"
+)
+
 const (
 	ENDPOINT string = "www.google-analytics.com/collect"
 )
@@ -18,7 +22,7 @@ func (s stack) Peek() string {
 }
 
 func (s stack) Len() string {
-	return len(s.messages)
+	return strconv.Itoa(len(s.messages))
 }
 
 func (s *stack) Put(i string) {
